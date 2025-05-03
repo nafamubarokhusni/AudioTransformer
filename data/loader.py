@@ -5,11 +5,11 @@ import tensorflow as tf # type: ignore
 from sklearn.model_selection import train_test_split # type: ignore
 
 # Constants (define these based on your project requirements)
-N_MFCC = 13
-SEQ_LENGTH = 100
+N_MFCC = 20
+SEQ_LENGTH = 512
 BATCH_SIZE = 32
 NUM_FEATURE = 8
-SOUND_FOLDER = "path_to_sound_folder"
+SOUND_FOLDER = "/kaggle/input/airs-ai-in-respiratory-sounds/sounds/sounds"
 
 def segment_cough_sound(signal, sr, cough_threshold=0.05, min_cough_duration=0.1, padding=0.05):
     hop_length = int(min_cough_duration * sr)
