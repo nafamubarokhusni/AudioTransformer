@@ -122,8 +122,3 @@ def split_data(data, test_size=0.2, random_state=42):
         data, test_size=test_size, random_state=random_state, stratify=data['disease']
     )
     return train_data, valid_data
-
-train_data_df, valid_data_df = split_data(data)
-
-train_dataset = create_dataset(train_data_df, batch_size=BATCH_SIZE)
-valid_dataset = create_dataset(valid_data_df, batch_size=BATCH_SIZE)
