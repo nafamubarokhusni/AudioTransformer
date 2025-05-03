@@ -4,6 +4,7 @@ import numpy as np
 
 NUM_FEATURE = 8  # Replace with the correct value
 SEQ_LENGTH = 512  # Replace with the correct value
+EMBED_DIM = 512  # Replace with the correct value
 
 class PositionalEncoding(tf.keras.layers.Layer):
     def __init__(self, sequence_length, embed_dim, trainable_embed=False, **kwargs):
